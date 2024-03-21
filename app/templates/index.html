@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Upload a File</h2>
+<input type="file" id="myFile" accept=".pdf" onchange="loadFile(event)">
+
+<h2>File Content:</h2>
+<pre id="output"></pre>
+
+<script>
+function loadFile(event) {
+    const reader = new FileReader();
+    reader.onload = function(){
+        const output = document.getElementById('output');
+        output.textContent = reader.result;
+    };
+    reader.readAsText(event.target.files[0]);
+}
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Upload a File</h2>
+<input type="file" id="myFile" accept=".pdf,.txt,.csv,.json" onchange="loadFile(event)">
+
+<h2>File Content:</h2>
+<pre id="output"></pre>
+
+<script>
+function loadFile(event) {
+    const reader = new FileReader();
+    reader.onload = function(){
+        const output = document.getElementById('output');
+        output.textContent = reader.result;
+    };
+    reader.readAsText(event.target.files[0]);
+}
+</script>
+
+</body>
+</html>
